@@ -1,9 +1,9 @@
 body{
-    background:gray;
+    background:lightgrey;
     margin: 0;
 }
 a{
-    text-decoration: none;
+	text-decoration: none;
 }
 .clearfix::after{
     content: '';
@@ -12,51 +12,46 @@ a{
 }
 
 .top-nav-bar{
-    padding: 20px 16px;
+	background-color: white;
 }
-.top-nav-bar a{
-    float: left;
-}
+/*logo部分*/
 .top-nav-bar .logo{
-    font-size: 24px;
-    font-family: "Arial Black";
-    padding-top: 16.5px;
-    padding-bottom: 16.5px;
+	float: left;
+	font-size: 24px;
+	font-weight: bold;
+	padding: 15.5px 20px;
 }
-.top-nav-bar .logo .rs{    
-    margin-right: 4px;
-    color: #e6686A;
+.top-nav-bar .logo .rs{
+	margin-right: 4px;
+	color: #E8676B;
 }
+
 .top-nav-bar .logo .card{
-    color: #9a9da2;
- }
+	color: #9A9DA2;
+}
 
-
-
+/*nav部分*/
 .top-nav-bar nav{
-    float: right;
-}
-.top-nav-bar nav a{
-    color: rgba(255, 255, 255, 0.7);
-    font-weight: bold;
-}
-.top-nav-bar nav ul{
-    list-style: none;
+	float: right;
+	padding-right: 20px;
+	padding-left: 20px;
 }
 .top-nav-bar nav ul li{
-    float: left;
-    margin-left: 17px;
-    margin-right: 17px;
-
-  
+	list-style: none;
+	float: left;
+	margin-right: 17px;
+	margin-left: 17px;
 }
 .top-nav-bar nav ul li a{
-    border-top: 2px solid transparent;
-    border-bottom: 3px solid transparent;
-    padding-top:4px;
-    padding-bottom: 4px;
-    display: block;
-}
+	font-size: 12px;
+	font-weight: bold;
+	display: block;
+	padding-bottom: 4px;
+	padding-top: 4px;
+	border-bottom: solid 3px transparent;
+	border-top: solid 3px transparent;
+	color: #595F6A;
+	}
 .top-nav-bar nav ul li a:hover{
-    border-bottom-color: red;
+	border-bottom: 3px #E8676B solid;
 }
