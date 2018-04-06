@@ -61,9 +61,38 @@ a{
 .banner{
 	height: 515px;
 	background-image: url("./img/rs-cover.jpg");
+	background-position: center center;
+	background-size: cover;
 	
 }
 .banner .mask{
 	height: 515px;
 	background-color:rgba(0, 0,0,0.8);
+}
+/*UserCard部分*/
+.userCard{
+	border: firebrick 3px solid;
+	max-width: 940px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #FFFFFF;
+}
+.userCard .welcome{
+	display: inline-block;
+	background: #E6686A;
+	color: white;
+	padding: 5px 16px;
+	line-height: 22px;
+	position: relative;
+
+}
+.userCard .welcome .triangle{
+	display: block;
+	border: 10px solid transparent;
+	width: 0px;
+	border-left-color: #E6686A;
+	border-top-width: 0px;
+	position: absolute;
+	top: 100%;
+	left:4px;
 }
