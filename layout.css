@@ -83,6 +83,7 @@ a{
 	color: white;
 	padding: 5px 16px;
 	line-height: 22px;
+	margin-bottom: 30px;
 	position: relative;
 
 }
@@ -95,4 +96,57 @@ a{
 	position: absolute;
 	top: 100%;
 	left:4px;
+}
+
+.userCard .pictureAndText{
+	padding: 50px;
+}
+.userCard .picture{
+	float: left;
+}
+.userCard .text{
+	margin-left:50px; 
+	float: left;
+	width: 470px;
+}
+.userCard .text hr{
+	margin: 20px 0;
+	height: 0;
+	border:none;
+	border-top: 1px solid #DEDEDE;
+}
+.userCard .text dt,.userCard .text dd{
+	float: left;
+	padding: 5px 0;
+}
+.userCard .text dt{
+	font-weight: bold;
+	width: 30%;
+}
+.userCard .text dd{
+	color: #9da0a7;
+	width: 70%;
+}
+.userCard .media{
+	background: #E6686A;
+	text-align: center;
+
+}
+.userCard .media a{
+	border-radius: 50%;
+    display: inline-block;
+	height: 40px;
+	padding: 5px;
+	
+
+}
+.userCard .media a:hover{
+	background: #cf5d5f;
+	
+}
+.userCard svg{
+	width: 40px;
+	height: 40px;
+	vertical-align:top;
+
 }
