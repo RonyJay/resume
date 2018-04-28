@@ -193,7 +193,14 @@ section.skills,section.portfolio{
 }
 
 
-section.skills,section.portfolio >h2{
+section.portfolio >h2{
+	color: #3d4451;
+	text-align: center;
+	font-size: 34px;
+	line-height: 1.2;
+	font-weight: 600;
+}
+section.skills>h2{
 	color: #3d4451;
 	text-align: center;
 	font-size: 34px;
@@ -284,4 +291,55 @@ section.portfolio .works{
 }
 section.portfolio .works .big,.portfolio .works .small{
 	position: absolute;
+}
+.site-welcome{
+	background: gray;
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	align-items: center;
+	justify-content: center;
+}
+.site-welcome.active{
+	display: flex;
+}
+.loading{
+	height: 200px;
+	width: 200px;
+	position: relative;
+	
+}
+
+.loading::before,.loading::after {     
+	content: '';     
+	position: absolute;
+	height: 0px;
+	width: 0px;
+	background: black;
+	border-radius: 50%;     
+	animation: s 1.5s linear infinite;  
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+.loading::after{
+	animation-delay: 0.75s;
+}
+@keyframes s{
+	0%{
+		width: 0px;
+		height: 0px;
+		opacity: 1;
+	}
+	100%{
+		width: 80px;
+		height: 80px;
+		opacity: 0;
+	}
 }

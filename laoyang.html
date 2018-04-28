@@ -20,6 +20,10 @@
 </head>
 
 <body>
+    <div class="site-welcome active" id="site-welcome">
+        <div class="loading"></div>
+    </div>
+
     <div class="top-nav-bar clearfix">
         <a class="logo" href="#" alt='logo'>
             <span class="rs">RS</span>
@@ -111,7 +115,7 @@
                     </div>
                 </div>
             </li>
-            
+
             <li>
                 <h3>JavaScript</h3>
                 <div class="progress-bar">
@@ -139,7 +143,7 @@
             <li>
                 <h3>React</h3>
                 <div class="progress-bar">
-                    <div class="progress"  style="width:55%"> 
+                    <div class="progress" style="width:55%">
 
                     </div>
                 </div>
@@ -147,7 +151,7 @@
             <li>
                 <h3>HTTP</h3>
                 <div class="progress-bar">
-                    <div class="progress"  style="width:90%">
+                    <div class="progress" style="width:90%">
 
                     </div>
                 </div>
@@ -170,19 +174,19 @@
             </div>
         </nav>
         <script>
-            portfolio1.onclick=function(){
+            portfolio1.onclick = function () {
                 portfolioBar.className = "bar state-1"
             }
-            portfolio2.onclick=function(){
+            portfolio2.onclick = function () {
                 portfolioBar.className = "bar state-2"
             }
-            portfolio3.onclick=function(){
+            portfolio3.onclick = function () {
                 portfolioBar.className = "bar state-3"
             }
         </script>
         <div class="works" style="height: 597px;">
             <div class="big" style="top:0px;left:0px">
-               <img src="./img/1.jpg" alt="图片1">
+                <img src="./img/1.jpg" alt="图片1">
             </div>
             <div class="small" style="top:0px;left:627px">
                 <img src="./img/2.jpg" alt="图片1">
@@ -191,8 +195,10 @@
                 <img src="./img/3.jpg" alt="图片1">
             </div>
         </div>
-        
+
     </section>
+    <script src="./main.js"></script>
 </body>
+
 
 </html>
