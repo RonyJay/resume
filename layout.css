@@ -20,13 +20,23 @@ h1,h2,h3,h4{
 .top-nav-bar{
 	position: fixed;
 	width: 100%;
+	padding: 20px;
+	transition: all 1s;
+	color: #b7b7b7;
+
+}
+.top-nav-bar.sticky{
+	background:white;
+	padding:10px;
+	z-index: 1;
+	box-shadow: 0 0 10px rgba(0, 0,0,0.8);
+	color: #3d4451;
 }
 /*logo部分*/
 .top-nav-bar .logo{
 	float: left;
 	font-size: 24px;
 	font-weight: bold;
-	padding: 20px;
 	font-family: 'Arial Black';
 }
 .top-nav-bar .logo .rs{
@@ -41,13 +51,15 @@ h1,h2,h3,h4{
 /*nav部分*/
 .top-nav-bar nav{
 	float: right;
-	padding: 20px;
+	padding-right: 40px;
+	
 }
 .top-nav-bar nav ul li{
 	list-style: none;
 	float: left;
 	margin-right: 17px;
 	margin-left: 17px;
+	position: relative;
 }
 .top-nav-bar nav ul li a{
 	font-size: 12px;
@@ -57,13 +69,41 @@ h1,h2,h3,h4{
 	padding-top: 4px;
 	border-bottom: solid 3px transparent;
 	border-top: solid 3px transparent;
-	color: #b7b7b7;
+	color:inherit;
+	position: relative;
 	}
-.top-nav-bar nav ul li a:hover{
-	border-bottom: 3px #E8676B solid;
+.top-nav-bar nav ul li a:hover::after{
+	content: '';
+	display: block;
+	position: absolute;
+	background: #e06567;
+	left: 0;
+	height: 3px;
+	width: 100%;
+	top: 100%;
+	animation: menuSlide 0.5s;
 }
-
-
+@keyframes menuSlide{
+	0%{
+		width: 0;
+	}
+	100%{
+		width: 100%;
+	}
+}
+.top-nav-bar .submenu {
+	display: none;
+	position: absolute;;
+}
+.top-nav-bar .submenu.active{
+	display: block;
+}
+.top-nav-bar .submenu >span {
+	display: block;
+	margin: 5px 0;
+	white-space: nowrap;
+	
+}
 .banner{
 	height: 515px;
 	background-image: url("./img/rs-cover.jpg");
