@@ -20,24 +20,39 @@
 </head>
 
 <body>
-    <div class="top-nav-bar clearfix">
+    <div class="site-welcome active" id="site-welcome">
+        <div class="loading"></div>
+    </div>
+
+    <div id='top-nav-bar' class="top-nav-bar clearfix">
         <a class="logo" href="#" alt='logo'>
             <span class="rs">RS</span>
             <span class="card">card</span>
         </a>
-        <nav>
+        <nav class="menu">
             <ul class="clearfix">
                 <li>
-                    <a href="#">关于</a>
+                    <a  href="#siteAbout">关于</a>
                 </li>
                 <li>
-                    <a href="#">技能</a>
+                    <a  href="#siteSkills">技能</a>
+                    <ul class="submenu">
+                        <span>作品1作品1</span>
+                        <span>作品2作品2</span>
+                        <span>作品3作品3</span>
+
+                    </ul>
                 </li>
                 <li>
-                    <a href="#">作品</a>
+                    <a  href="#siteWorks">作品</a>
                 </li>
                 <li>
                     <a href="#">博客</a>
+                    <ul class="submenu">
+                        <span>博客1</span>
+                        <span>博客2</span>
+                        <span>博客3</span>
+                    </ul>
                 </li>
                 <li>
                     <a href="#">日历</a>
@@ -55,7 +70,7 @@
         <div class="mask"></div>
     </div>
     <main>
-        <div class="userCard">
+        <div id='siteAbout' class="userCard">
             <div class="pictureAndText clearfix">
                 <div class="picture">
                     <img src="./img/psb.jpg" alt="" height="350px" width="300px">
@@ -100,7 +115,7 @@
             <br>技能：前端开发，Rails 开发，Node.js 开发
         </p>
     </main>
-    <section class="skills">
+    <section id='siteSkills' class="skills">
         <h2>技能</h2>
         <ol class="skills-list clearfix">
             <li>
@@ -111,7 +126,7 @@
                     </div>
                 </div>
             </li>
-            
+
             <li>
                 <h3>JavaScript</h3>
                 <div class="progress-bar">
@@ -139,7 +154,7 @@
             <li>
                 <h3>React</h3>
                 <div class="progress-bar">
-                    <div class="progress"  style="width:55%"> 
+                    <div class="progress" style="width:55%">
 
                     </div>
                 </div>
@@ -147,14 +162,14 @@
             <li>
                 <h3>HTTP</h3>
                 <div class="progress-bar">
-                    <div class="progress"  style="width:90%">
+                    <div class="progress" style="width:90%">
 
                     </div>
                 </div>
             </li>
         </ol>
     </section>
-    <section class="portfolio">
+    <section id='siteWorks' class="portfolio">
         <h2>作品集</h2>
         <nav>
             <ol class="clearfix ">
@@ -170,19 +185,19 @@
             </div>
         </nav>
         <script>
-            portfolio1.onclick=function(){
+            portfolio1.onclick = function () {
                 portfolioBar.className = "bar state-1"
             }
-            portfolio2.onclick=function(){
+            portfolio2.onclick = function () {
                 portfolioBar.className = "bar state-2"
             }
-            portfolio3.onclick=function(){
+            portfolio3.onclick = function () {
                 portfolioBar.className = "bar state-3"
             }
         </script>
         <div class="works" style="height: 597px;">
             <div class="big" style="top:0px;left:0px">
-               <img src="./img/1.jpg" alt="图片1">
+                <img src="./img/1.jpg" alt="图片1">
             </div>
             <div class="small" style="top:0px;left:627px">
                 <img src="./img/2.jpg" alt="图片1">
@@ -191,8 +206,10 @@
                 <img src="./img/3.jpg" alt="图片1">
             </div>
         </div>
-        
+
     </section>
+    <script src="./main.js"></script>
 </body>
+
 
 </html>
