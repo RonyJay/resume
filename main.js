@@ -31,7 +31,31 @@ for(let i=0;i<aTags.length;i++){
 		let a=e.currentTarget;
 		let href=a.getAttribute('href')
 		let element=document.querySelector(href)
-		let top=element.offsetTop
-		window.scrollTo(0,top-80)
+        let top=element.offsetTop
+        
+        let currentTop=window.scrollY
+        let targetTop=top-80
+        s=targetTop-currentTop
+       
+		function animate(time) {
+            requestAnimationFrame(animate);
+            TWEEN.update(time);
+        }
+        requestAnimationFrame(animate);
+        
+        var coords = {y:currentTop }; //初始值
+        var t=Math.abs((s/100)*500)
+        if(t>1000){
+            t=500
+        }
+        var tween = new TWEEN.Tween(coords) 
+                .to({y: targetTop }, t) //目标值-时间
+                .easing(TWEEN.Easing.Quadratic.InOut) //缓动动画
+                .onUpdate(function() { 
+                    window.scrollTo(0,coords.y)
+                })//每次会调用这个函数
+                .start(); 
 	}
 }
+
+// Setup the animation loop.
