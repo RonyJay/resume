@@ -12,13 +12,11 @@ window.onscroll = function () {
     }
     //滑动距离，对应标签高亮
     let speacialTags = document.querySelectorAll('[data-x]')
+    let minIndex = 0
     for (let i = 1; i < speacialTags.length; i++) {
-        let minIndex = 0
         if (Math.abs(speacialTags[i].offsetTop - window.scrollY) < Math.abs(speacialTags[minIndex].offsetTop - window.scrollY)) {
             minIndex = i
         }
-        console.log(minIndex)
-
         let id = speacialTags[minIndex].id
         // siteAbout
         // siteSkills
@@ -30,7 +28,6 @@ window.onscroll = function () {
             brothers[i].classList.remove('active')
         }
         li.classList.add('active')
-
     }
 }
 //top-nav-bar二级菜单
