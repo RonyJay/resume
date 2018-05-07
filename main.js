@@ -25,9 +25,12 @@ window.onscroll = function () {
         let li = a.parentNode
         let brothers = li.parentNode.children
         for (let i = 0; i < brothers.length; i++) {
-            brothers[i].classList.remove('active')
+            brothers[i].classList.remove('highlight')
         }
-        li.classList.add('active')
+        if(window.scrollY!==0){
+            li.classList.add('highlight')
+        }
+        
     }
 }
 //top-nav-bar二级菜单

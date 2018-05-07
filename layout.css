@@ -88,7 +88,8 @@ h4 {
 	position: relative;
 }
 
-.top-nav-bar nav>ul>li.active>a::after {
+.top-nav-bar nav>ul>li.active>a::after ,
+.top-nav-bar nav>ul>li.highlight>a::after{
 	content: '';
 	display: block;
 	position: absolute;
