@@ -3,36 +3,56 @@ setTimeout(function () {
     document.getElementById("site-welcome").classList.remove("active")
 }, 500);
 
+
+
 //设置topnavbar sticky效果
-window.onscroll = function () {
-    if (window.scrollY > 0) {
-        document.getElementById('top-nav-bar').classList.add("sticky")
-    } else {
-        document.getElementById('top-nav-bar').classList.remove("sticky")
+!function () {
+    var view = document.querySelector('#top-nav-bar')
+    var controller = {
+        view: null,
+        init: function (view) {
+            this.view = view
+            this.bindEvents()
+        },
+        bindEvents: function () {
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 0) {
+                    view.classList.add("sticky")
+                } else {
+                    view.classList.remove("sticky")
+                }
+            })
+        }
     }
-    //滑动距离，对应标签高亮
-    let speacialTags = document.querySelectorAll('[data-x]')
-    let minIndex = 0
-    for (let i = 1; i < speacialTags.length; i++) {
-        if (Math.abs(speacialTags[i].offsetTop - window.scrollY) < Math.abs(speacialTags[minIndex].offsetTop - window.scrollY)) {
-            minIndex = i
-        }
-        let id = speacialTags[minIndex].id
-        // siteAbout
-        // siteSkills
-        // siteWorks
-        let a = document.querySelector("a[href='#" + id + "']")
-        let li = a.parentNode
-        let brothers = li.parentNode.children
-        for (let i = 0; i < brothers.length; i++) {
-            brothers[i].classList.remove('highlight')
-        }
-        if(window.scrollY!==0){
-            li.classList.add('highlight')
-        }
-        
+controller.init(view)
+}.call()
+
+
+
+
+//滑动距离，对应标签高亮
+let speacialTags = document.querySelectorAll('[data-x]')
+let minIndex = 0
+for (let i = 1; i < speacialTags.length; i++) {
+    if (Math.abs(speacialTags[i].offsetTop - window.scrollY) < Math.abs(speacialTags[minIndex].offsetTop - window.scrollY)) {
+        minIndex = i
     }
+    let id = speacialTags[minIndex].id
+    // siteAbout
+    // siteSkills
+    // siteWorks
+    let a = document.querySelector("a[href='#" + id + "']")
+    let li = a.parentNode
+    let brothers = li.parentNode.children
+    for (let i = 0; i < brothers.length; i++) {
+        brothers[i].classList.remove('highlight')
+    }
+    if (window.scrollY !== 0) {
+        li.classList.add('highlight')
+    }
+
 }
+
 //top-nav-bar二级菜单
 let liTags = document.querySelectorAll('nav.menu>ul>li')
 for (let i = 0; i < liTags.length; i++) {
