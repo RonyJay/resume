@@ -2,7 +2,13 @@
 	padding: 0;
 	margin: 0;
 }
-
+.icon {
+	width: 1em;
+	height: 1em;
+	vertical-align: -0.15em;
+	fill: currentColor;
+	overflow: hidden;
+}
 a {
 	text-decoration: none;
 }
@@ -280,6 +286,7 @@ section.portfolio {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 60px;
+	position: relative;
 }
 
 section.portfolio>h2 {
@@ -288,6 +295,7 @@ section.portfolio>h2 {
 	font-size: 34px;
 	line-height: 1.2;
 	font-weight: 600;
+	margin-bottom: 30px;
 }
 
 section.skills>h2 {
@@ -394,10 +402,7 @@ section.portfolio .works {
 	position: relative;
 }
 
-section.portfolio .works .big,
-.portfolio .works .small {
-	position: absolute;
-}
+
 
 .site-welcome {
 	background: gray;
@@ -453,4 +458,18 @@ section.portfolio .works .big,
 		height: 80px;
 		opacity: 0;
 	}
+}
+
+/*swpier*/
+section.portfolio .swiper-container {
+    width: 600px;
+	height: 400px;
+	
+}  
+section.portfolio .swiper-container{
+	z-index: 0;
+	position: relative;
+}
+section.portfolio .swiper-button-prev, .swiper-button-next{
+	z-index: 0;
 }

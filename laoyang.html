@@ -6,19 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>老杨的css练习</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
     <link rel="stylesheet" href="./layout.css">
-    <script src="https://at.alicdn.com/t/font_618694_cz9sp96frt6s9k9.js"></script>
-    <style type="text/css">
-        .icon {
-            width: 1em;
-            height: 1em;
-            vertical-align: -0.15em;
-            fill: currentColor;
-            overflow: hidden;
-        }
-    </style>
 </head>
-
 <body>
     <div class="site-welcome active" id="site-welcome">
         <div class="loading"></div>
@@ -32,10 +22,10 @@
         <nav class="menu">
             <ul class="clearfix">
                 <li>
-                    <a  href="#siteAbout">关于</a>
+                    <a href="#siteAbout">关于</a>
                 </li>
                 <li>
-                    <a  href="#siteSkills">技能</a>
+                    <a href="#siteSkills">技能</a>
                     <ul class="submenu">
                         <span>作品1作品1</span>
                         <span>作品2作品2</span>
@@ -44,7 +34,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a  href="#siteWorks">作品</a>
+                    <a href="#siteWorks">作品</a>
                 </li>
                 <li>
                     <a href="#">博客</a>
@@ -171,47 +161,31 @@
     </section>
     <section data-x id='siteWorks' class="portfolio">
         <h2>作品集</h2>
-        <nav>
-            <ol class="clearfix ">
-                <li id="portfolio1">所有</li>
-                <li id="portfolio2">框架</li>
-                <li id="portfolio3">原生JS&amp;CSS</li>
-            </ol>
-            <div id="portfolioBar" class="bar state-1">
-                <div class="bar-inner">
 
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./img/1.jpg" alt="图片1">
                 </div>
+                <div class="swiper-slide">
+                    <img src="./img/2.jpg" alt="图片1">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/3.jpg" alt="图片1">
+                </div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+            <!-- 如果需要导航按钮 -->
 
-            </div>
-        </nav>
-        <script>
-            portfolio1.onclick = function () {
-                portfolioBar.className = "bar state-1"
-            }
-            portfolio2.onclick = function () {
-                portfolioBar.className = "bar state-2"
-            }
-            portfolio3.onclick = function () {
-                portfolioBar.className = "bar state-3"
-            }
-        </script>
-        <div class="works" style="height: 597px;">
-            <div class="big" style="top:0px;left:0px">
-                <img src="./img/1.jpg" alt="图片1">
-            </div>
-            <div class="small" style="top:0px;left:627px">
-                <img src="./img/2.jpg" alt="图片1">
-            </div>
-            <div class="small" style="top:312px;left:627px">
-                <img src="./img/3.jpg" alt="图片1">
-            </div>
         </div>
-
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
     </section>
+    <script src="https://at.alicdn.com/t/font_618694_cz9sp96frt6s9k9.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.3.5/Tween.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+    <script src="./init-swiper.js"></script>
     <script src="./main.js"></script>
-    
 </body>
-
-
 </html>
