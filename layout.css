@@ -289,7 +289,7 @@ section.portfolio {
 	position: relative;
 }
 
-section.portfolio>h2 {
+section.portfolio>h2,section.Message>h2 {
 	color: #3d4451;
 	text-align: center;
 	font-size: 34px;
@@ -472,4 +472,16 @@ section.portfolio .swiper-container{
 }
 section.portfolio .swiper-button-prev, .swiper-button-next{
 	z-index: 0;
+}
+
+/*留言板部分*/
+section.Message >ol{
+	max-width: 700px;
+	margin: 0 auto;
+	border-top: 1px solid #ddd;
+	background: #f4f4f4;
+}
+section.Message >ol>li{
+	border-bottom: 1px solid #ddd;
+	padding: 16px;
 }
