@@ -36,18 +36,15 @@
     },
 
     bindEvents: function () {
-
-      this.form.addEventListener('submit', function (e) {
+      this.form.addEventListener('submit',  (e)=> {
         e.preventDefault()
-        console.log(this)
-        controller.SaveMessage()
-      
+        this.SaveMessage()
+
       })
     },
 
 
     SaveMessage: function () {
-      console.log(this)
       let myForm = this.form
       let name = myForm.querySelector('input[name=name]').value
       let content = myForm.querySelector('input[name=content]').value
