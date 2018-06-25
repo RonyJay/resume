@@ -65,12 +65,16 @@
     SaveMessage: function () {
       let myForm = this.form
       let name = myForm.querySelector('input[name=name]').value
+
       let content = myForm.querySelector('input[name=content]').value
       this.model.save(name,content).then(function (object) {
         let li = document.createElement('li')
+        if(name===''||content===''){
+          alert('请输入完整内容')
+        }else{
         li.innerText = `${object.attributes.name} : ${object.attributes.content}`
         this.MessagetList.appendChild(li)
-        myForm.querySelector('input[name=content]').value = ''
+        myForm.querySelector('input[name=content]').value = ''}
       })
     },
 
