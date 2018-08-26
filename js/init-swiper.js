@@ -1,5 +1,5 @@
 !function () {
-    var view = document.querySelector('#myslides')
+    var view = window.View('#myslides')
     var controller = function (view) {
         var mySwiper = new Swiper('.swiper-container', {
 
